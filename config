@@ -1,0 +1,84 @@
+Host mikado
+	ProxyCommand ssh -q wigner nc -q0 mikado 22
+	ForwardAgent yes
+	ForwardX11 no
+	ServerAliveInterval 60
+	User USERNAME
+
+Host novem
+	ProxyCommand ssh -q wigner nc -q0 novem 22
+	ForwardAgent yes
+	ForwardX11 no
+	ServerAliveInterval 60
+	User USERNAME
+
+Host abalone
+	ProxyCommand ssh -q wigner nc -q0 abalone 22
+	ForwardAgent yes
+	ForwardX11 no
+	ServerAliveInterval 60
+	User USERNAME
+
+Host neel
+	Hostname neel.chimie.ens.fr
+	ForwardAgent yes
+	ForwardX11 no
+	ServerAliveInterval 60
+	User USERNAME
+
+Host wigner
+	Hostname wigner.chimie.ens.fr
+	ForwardAgent yes
+	ForwardX11 no
+	ServerAliveInterval 60
+	User USERNAME
+
+Host metropolis
+	ProxyCommand ssh -q wigner nc -q0 metropolis 22
+	ForwardAgent yes
+	ForwardX11 no
+	ServerAliveInterval 60
+	User USERNAME
+	
+
+#######################################
+######  maison de la simulation  ######
+#######################################
+
+Host hubble
+	Hostname hubble.extra.cea.fr
+	ForwardAgent yes
+	ForwardX11 no
+	ServerAliveInterval 60
+	User USERNAME
+
+
+Host poincare
+	ProxyCommand ssh -q hubble nc -q0 poincareint01.maisondelasimulation.fr 22
+	ForwardAgent yes
+	ForwardX11 no
+	ServerAliveInterval 60
+	User USERNAME
+
+#######################################
+######          Juelich          ######
+#######################################
+
+Host jureca
+	Hostname jureca.fz-juelich.de
+	ForwardAgent yes
+	ForwardX11 no
+	ServerAliveInterval 60
+	User USERNAME
+	
+#######################################
+######            psl            ######
+#######################################
+
+Host psl
+	Hostname styx.obspm.fr
+	ForwardAgent yes
+	ForwardX11 no
+	ServerAliveInterval 60
+	User USERNAME
+
