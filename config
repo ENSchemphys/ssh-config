@@ -54,7 +54,7 @@ Host hubble
 
 
 Host poincare
-	ProxyCommand ssh -q hubble nc -q0 poincareint01.maisondelasimulation.fr 22
+	ProxyCommand ssh -q neel nc -q0 poincareint01.maisondelasimulation.fr 22
 	ForwardAgent yes
 	ForwardX11 no
 	ServerAliveInterval 60
