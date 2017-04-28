@@ -82,3 +82,9 @@ Host psl
 	ServerAliveInterval 60
 	User USERNAME
 
+Host mesopsl
+	ProxyCommand ssh -q psl nc -q0 mesopsl 22
+	ForwardAgent yes
+	ForwardX11 no
+	ServerAliveInterval 60
+	User USERNAME
